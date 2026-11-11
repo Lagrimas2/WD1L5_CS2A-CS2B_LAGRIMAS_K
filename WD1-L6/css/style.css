@@ -1,0 +1,51 @@
+/* ===== Color variables: light pink theme (change here to restyle everything) ===== */
+:root {
+  --dark: #6b2d45;      /* deep rose for text */
+  --accent: #f4a6c0;    /* main pink */
+  --accent-dark: #e98bb0;
+  --bg: #fff7fa;        /* page background */
+  --section: #ffe6ef;   /* alternate section background */
+}
+
+html { scroll-behavior: smooth; }  /* smooth scroll for navbar links */
+body { font-family: "Poppins", sans-serif; background: var(--bg); color: #4a3640; }
+h1, h2, h3, .navbar-brand { font-family: "Playfair Display", serif; }
+
+/* ----- Navbar ----- */
+.navbar { background: transparent; transition: background .3s; }
+.navbar.scrolled { background: var(--section); box-shadow: 0 2px 8px rgba(107,45,69,.15); } /* class added by JS */
+.navbar-brand, .navbar .nav-link { color: var(--dark) !important; }
+.navbar .nav-link.active { font-weight: 600; border-bottom: 2px solid var(--accent-dark); }
+
+/* ----- Hero ----- */
+.hero { min-height: 100vh; color: var(--dark); background: linear-gradient(160deg, #ffe6ef, #ffd1e1 60%, #fff7fa); }
+.hero-sub { font-size: 1.2rem; }
+.typed-text { color: var(--accent-dark); font-weight: 600; }
+.cursor { animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ----- Shared ----- */
+.section-title { color: var(--dark); font-weight: 700; }
+.bg-section { background: var(--section); }
+.btn-accent { background: var(--accent); color: var(--dark); border: none; font-weight: 500; }
+.btn-accent:hover { background: var(--accent-dark); color: var(--dark); }
+.btn-outline-accent { border: 2px solid var(--accent-dark); color: var(--dark); }
+.btn-outline-accent:hover, .btn-outline-accent.active { background: var(--accent); border-color: var(--accent); color: var(--dark); }
+.form-control:focus { border-color: var(--accent-dark); box-shadow: 0 0 0 .2rem rgba(244,166,192,.35); }
+
+/* ----- Developer ----- */
+.profile-img { width: 300px; height: 300px; object-fit: cover; border: 6px solid var(--accent); }
+.motto { border-left: 5px solid var(--accent-dark); background: var(--section); color: var(--dark); }
+
+/* ----- Philosophy cards ----- */
+.philosophy-card { cursor: pointer; transition: transform .2s; border: 0; border-top: 4px solid var(--accent-dark); }
+.philosophy-card:hover { transform: translateY(-5px); }
+.hidden-text { display: none; }   /* shown by JS on click */
+.philosophy-intro { max-width: 650px; }
+
+/* ----- Projects ----- */
+.project .card-img-top { height: 200px; object-fit: cover; }
+.project.hide { display: none; }  /* toggled by filter buttons */
+
+/* ----- Footer ----- */
+footer { background: var(--section); color: var(--dark); }
